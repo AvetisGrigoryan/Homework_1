@@ -21,4 +21,4 @@ pip install -r requirements.txtpip
 ## Контакты:
 Аветис - avetisgrib@gmail.com
 
-Ссылка на проект - [GitHub]()
+Ссылка на проект - [GitHub](https://github.com/AvetisGrigoryan/Homework_1.git)
