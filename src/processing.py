@@ -8,18 +8,18 @@ original_list = [
 ]
 
 
-def filter_by_state(original_list: list[dict[str, Any]], new_state: str = 'EXECUTED') -> list[dict[str, Any]]:
+def filter_by_state(original_list: list[dict[str, Any]], state: str = 'EXECUTED') -> list[dict[str, Any]]:
     """ Функция, возвращает новый список словарей по ключу 'state' """
     new_list = []
     for key in original_list:
-        if key.get('state') == new_state:
+        if key.get('state') == state:
             new_list.append(key)
     return new_list
 
 
-def sort_by_date(original_list: list[dict[str, Any]], new_revers: bool = True) -> list[dict[str, Any]]:
+def sort_by_date(original_list: list[dict[str, Any]], is_ascending: bool = True) -> list[dict[str, Any]]:
     """ Функция, возвращать новый список отсортированный по дате"""
-    sorted_state = sorted(original_list, key=lambda original_list: original_list['date'], reverse=new_revers)
+    sorted_state = sorted(original_list, key=lambda original_list: original_list['date'], reverse=is_ascending)
     return sorted_state
 
 
