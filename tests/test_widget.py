@@ -17,7 +17,9 @@ def test_mask_account_card(string: str, expected: str):
 @pytest.mark.parametrize("string, expected", [
     ("2018-07-11T02:26:18.671407", "11.07.2018"),
     ("2019-08-12T02:25:19.671408", "12.08.2019"),
-    ("2020-09-10T02:26:18.671407", "10.09.2020")
+    ("2020-09-10T02:26:18.671407", "10.09.2020"),
+    ("2021-10-11B0:27:19.199221", "21.10.2021"),
+    ("2021-12-11A0:27:19.199221", "21.12.2021")
 ])
 def test_get_date(string: str, expected: str):
     assert get_date(string) == expected
