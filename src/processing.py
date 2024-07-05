@@ -19,7 +19,7 @@ def filter_by_state(original_list: list[dict[str, Any]], state: str = 'EXECUTED'
 
 def sort_by_date(original_list: list[dict[str, Any]], is_ascending: bool = True) -> list[dict[str, Any]]:
     """ Функция, возвращать новый список отсортированный по дате"""
-    sorted_state = sorted(original_list, key=lambda original_list: original_list['date'], reverse=is_ascending)
+    sorted_state = sorted(original_list, key=lambda original: original['date'], reverse=is_ascending)
     return sorted_state
 
 
